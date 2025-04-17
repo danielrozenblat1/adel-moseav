@@ -1,0 +1,325 @@
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.content {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.title {
+  font-family: 'Assistant', sans-serif;
+  font-size: 2rem;
+  margin: 3% auto;
+  background: linear-gradient(45deg, 
+  #4bc9f5 0%,     
+  #6dd5f7 15%,    
+  #5ec3ea 30%,    
+  #7addf9 45%,    
+  #56c0ea 60%,    
+  #8be4fb 75%,    
+  #64bde3 90%,    
+  #6dd5f7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  direction: rtl;
+  text-shadow: 0 0 3px rgba(0, 188, 212, 0.1);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.timeline {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, 
+    rgba(102, 204, 215, 0.2) 0%, 
+    rgba(84, 190, 205, 0.25) 50%, 
+    rgba(65, 178, 195, 0.3) 100%
+  );
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.timelineProgress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(180deg, 
+    #75d1de 0%, 
+    #4bbccc 100%
+  );
+  box-shadow: 
+    0 0 5px rgba(84, 190, 205, 0.2);
+  transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: progressPulse 3s infinite;
+}
+
+.timelineItem {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: 2;
+}
+
+.timelineItem.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.timelineItem.inactive {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.timelineNumber {
+  position: absolute;
+  top: -1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  border: 2px solid #6dd5f7;
+  z-index: 3;
+  box-shadow: 0 0 5px rgba(109, 213, 247, 0.2);
+}
+
+.timelineContent {
+  max-width: 450px;
+  width: 100%;
+  direction: rtl;
+  position: relative;
+  z-index: 3;
+}
+
+.glassEffect {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 3rem 1.75rem 1.75rem;
+  margin-top: 1.75rem;
+  border: 1px solid rgba(139, 228, 251, 0.15);
+  box-shadow: 
+    0 4px 10px rgba(109, 213, 247, 0.1),
+    0 0 0 1px rgba(139, 228, 251, 0.05);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  position: relative;
+}
+
+/* גווני צבע תכלת חדשים */
+.number-tone-1 {
+  border-color: rgba(102, 204, 215, 0.7);
+  box-shadow: 0 0 5px rgba(102, 204, 215, 0.2);
+}
+
+.number-tone-2 {
+  border-color: rgba(84, 190, 205, 0.7);
+  box-shadow: 0 0 5px rgba(84, 190, 205, 0.2);
+}
+
+.number-tone-3 {
+  border-color: rgba(68, 177, 193, 0.7);
+  box-shadow: 0 0 5px rgba(68, 177, 193, 0.2);
+}
+
+.number-tone-4 {
+  border-color: rgba(54, 165, 182, 0.7);
+  box-shadow: 0 0 5px rgba(54, 165, 182, 0.2);
+}
+
+.numberGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center, 
+    rgba(102, 204, 215, 0.1) 0%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.numberActive {
+  transform: translateX(-50%) scale(1.1);
+  border-width: 2px;
+  border-color: #54bec9;
+  box-shadow: 
+    0 0 0 3px rgba(102, 204, 215, 0.1),
+    0 4px 8px rgba(84, 190, 205, 0.15);
+}
+
+.numberInactive {
+  transform: translateX(-50%) scale(1);
+  border-color: rgba(102, 204, 215, 0.4);
+  background: white;
+}
+
+.numberActive .numberGlow {
+  opacity: 0.4;
+  animation: rotateGlow 6s linear infinite;
+}
+
+.numberActive .numberGlow {
+  opacity: 0.4;
+  animation: rotateGlow 6s linear infinite;
+}
+
+.checkIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #54bec9;
+  filter: drop-shadow(0 1px 2px rgba(84, 190, 205, 0.2));
+}
+
+.numberText {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #45b2c1;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #45b2c1;
+  font-family: 'Assistant', sans-serif;
+  text-align: center;
+}
+
+.timelineText {
+  color: #54bec9;
+  line-height: 1.75;
+  font-family: 'AssistantR', sans-serif;
+  text-align: center;
+}
+
+@keyframes rotateGlow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes progressPulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.7; }
+}
+
+.scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #75d1de, #45b2c1);
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+.cardActive {
+  transform: translateY(0);
+  opacity: 1;
+  box-shadow: 
+    0 6px 15px rgba(102, 204, 215, 0.1),
+    0 0 0 1px rgba(84, 190, 205, 0.08);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .timelineContent {
+    max-width: 85%;
+  }
+  
+  .glassEffect {
+    padding: 2.5rem 1.2rem 1.2rem;
+  }
+  
+  .timelineNumber {
+    width: 3rem;
+    height: 3rem;
+    top: -1.5rem;
+  }
+  
+  .timelineTitle {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .timelineText {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .timelineContent {
+    max-width: 90%;
+  }
+  
+  .glassEffect {
+    padding: 2.2rem 1rem 1rem;
+  }
+  
+  .timelineNumber {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: -1.25rem;
+  }
+  
+  .numberText {
+    font-size: 1.1rem;
+  }
+  
+  .timelineTitle {
+    font-size: 1rem;
+  }
+  
+  .timelineText {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .timelineItem {
+    margin-bottom: 3rem;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+}

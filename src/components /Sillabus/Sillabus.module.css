@@ -1,0 +1,616 @@
+/* סגנון משולב - מבנה כהה עם צבעי תכלת-טורקיז */
+
+.container {
+  background: linear-gradient(135deg, #2a2520, #36302a);
+  border-radius: 4rem;
+  padding: 2rem;
+  margin: 2% auto;
+  direction: rtl;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2% auto;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #5a9ea3, #7ab4b9, #C8EEEF, #7ab4b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Assistant', sans-serif;
+  text-shadow: 0 0 1px rgba(200, 238, 239, 0.3);
+}
+
+.infoGrid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(38, 33, 28, 0.6);
+  border-radius: 1rem;
+  border: 1px solid rgba(200, 238, 239, 0.2);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(200, 238, 239, 0.15);
+  border: 1px solid rgba(200, 238, 239, 0.3);
+}
+
+.infoIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #C8EEEF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoText {
+  color: #e3f5f6;
+  font-size: 0.95rem;
+  font-family: 'AssistantR', sans-serif;
+}
+
+.daysContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.dayCard {
+  background: rgba(38, 33, 28, 0.7);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(200, 238, 239, 0.2);
+  box-shadow: 0 4px 15px rgba(200, 238, 239, 0.08);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dayCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(200, 238, 239, 0.1) 0%, rgba(90, 158, 163, 0.05) 100%);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Day-specific background styles */
+.day01 {
+  position: relative;
+}
+
+.day01::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../images//אדל\ מושייב\ תמונה\ שמאלית.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.06;
+  z-index: -2;
+  border-radius: 1rem;
+}
+
+.day01::before {
+  background-image: radial-gradient(circle at top right, rgba(200, 238, 239, 0.15) 0%, rgba(90, 158, 163, 0.05) 100%);
+}
+
+.day02 {
+  position: relative;
+}
+
+.day02::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../images/אדל\ מושייב\ תמונה\ מרכזית.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.06;
+  z-index: -2;
+  border-radius: 1rem;
+}
+
+.day02::before {
+  background-image: radial-gradient(circle at bottom left, rgba(200, 238, 239, 0.15) 0%, rgba(90, 158, 163, 0.05) 100%);
+}
+
+/* Combined Course specific background styles */
+.combinedCourse {
+  position: relative;
+  background: rgba(38, 33, 28, 0.7);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(200, 238, 239, 0.2);
+  box-shadow: 0 4px 15px rgba(200, 238, 239, 0.08);
+  margin-bottom: 3rem;
+}
+
+.combinedCourse::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../images/אדל\ מושייב\ ריסים\ 12.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.06;
+  z-index: -2;
+  border-radius: 1rem;
+}
+
+.combinedCourse::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at center, rgba(200, 238, 239, 0.15) 0%, rgba(90, 158, 163, 0.05) 100%);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.courseHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.courseTitle {
+  font-size: 1.5rem;
+  color: #e3f5f6;
+  font-weight: 600;
+  font-family: 'Assistant', sans-serif;
+  background: linear-gradient(135deg, #7ab4b9, #C8EEEF, #5a9ea3, #7ab4b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 1px rgba(200, 238, 239, 0.3);
+}
+
+.bonusSection {
+  position: relative;
+}
+
+.bonusSection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../images/אדל\ מושייב\ ריסים\ 12.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.06;
+  z-index: -2;
+  border-radius: 1rem;
+}
+
+.dayHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.dayTitle {
+  font-size: 1.5rem;
+  color: #e3f5f6;
+  font-weight: 600;
+  font-family: 'Assistant', sans-serif;
+}
+
+.dayNumber {
+  font-size: 5.5rem;
+  font-weight: 200;
+  background: linear-gradient(135deg, #5a9ea3, #7ab4b9, #C8EEEF, #7ab4b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: "Assistant";
+  line-height: 1;
+  text-shadow: 0 0 1px rgba(200, 238, 239, 0.3);
+}
+
+.itemList {
+  display: grid;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(45, 40, 35, 0.7);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(200, 238, 239, 0.1);
+}
+
+.item:hover {
+  transform: translateX(-4px);
+  background: rgba(50, 45, 40, 0.8);
+  border: 1px solid rgba(200, 238, 239, 0.2);
+  box-shadow: 0 2px 10px rgba(200, 238, 239, 0.1);
+}
+
+.itemIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #C8EEEF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemText {
+  color: #e3f5f6;
+  font-size: 0.95rem;
+  font-family: 'AssistantR', sans-serif;
+}
+
+.bonusSection {
+  margin: 3rem 0;
+  background: rgba(38, 33, 28, 0.7);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(200, 238, 239, 0.2);
+  box-shadow: 0 4px 15px rgba(200, 238, 239, 0.08);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bonusSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(200, 238, 239, 0.1) 0%, rgba(90, 158, 163, 0.05) 100%);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.bonusTitle {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #5a9ea3, #7ab4b9, #C8EEEF, #7ab4b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Assistant', sans-serif;
+  text-shadow: 0 0 1px rgba(200, 238, 239, 0.3);
+}
+
+.footer {
+  margin-top: 4rem;
+  text-align: center;
+  color: #7a9ea3;
+  font-size: 0.9rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(200, 238, 239, 0.1);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200, 238, 239, 0.2), transparent);
+}
+
+.supportInfo {
+  margin-bottom: 1.5rem;
+}
+
+.supportText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #a3c8cb;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.starsContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  gap: 5px;
+}
+
+.starIcon {
+  color: #C8EEEF;
+  filter: drop-shadow(0 0 3px rgba(200, 238, 239, 0.3));
+}
+
+/* Responsive styles */
+@media (max-width: 350px) {
+  .container {
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 1% auto;
+  }
+  
+  .wrapper {
+    width: 90%;
+    padding: 1rem;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .infoGrid {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .infoCard {
+    padding: 0.5rem 1rem;
+  }
+  
+  .infoText {
+    font-size: 0.85rem;
+  }
+  
+  .daysContainer {
+    gap: 2rem;
+  }
+  
+  .dayCard {
+    padding: 1.5rem;
+  }
+  
+  .dayHeader {
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .dayNumber {
+    font-size: 3rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.2rem;
+  }
+  
+  .courseTitle {
+    font-size: 1.2rem;
+  }
+  
+  .itemList {
+    gap: 0.75rem;
+  }
+  
+  .item {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+  
+  .itemText {
+    font-size: 0.85rem;
+  }
+  
+  .bonusSection {
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+  
+  .bonusTitle {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .supportText {
+    font-size: 0.85rem;
+    max-width: 95%;
+  }
+}
+
+/* 350px - 450px */
+@media (min-width: 351px) and (max-width: 450px) {
+  .container {
+    padding: 1.2rem;
+    border-radius: 2.5rem;
+    margin: 1.2% auto;
+  }
+  
+  .wrapper {
+    width: 100%;
+  }
+  
+  .header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.7rem;
+  }
+  
+  .infoGrid {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2.2rem;
+  }
+  
+  .infoCard {
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .infoText {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .daysContainer {
+    gap: 2.2rem;
+  }
+  
+  .dayCard {
+    padding: 1.7rem;
+  }
+  
+  .dayHeader {
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .dayNumber {
+    font-size: 3.5rem;
+  }
+  
+  .dayTitle {
+    font-size: 1.3rem;
+  }
+  
+  .courseTitle {
+    font-size: 1.3rem;
+  }
+  
+  .itemList {
+    gap: 0.8rem;
+  }
+  
+  .item {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+  
+  .itemText {
+    font-size: 0.9rem;
+  }
+  
+  .bonusTitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* 450px - 550px */
+@media (min-width: 451px) and (max-width: 550px) {
+  .container {
+    padding: 1.4rem;
+    border-radius: 3rem;
+    margin: 1.4% auto;
+  }
+  
+  .wrapper {
+    width: 93%;
+    padding: 1.4rem;
+  }
+  
+  .title {
+    font-size: 2.1rem;
+  }
+  
+  .infoGrid {
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+  
+  .dayNumber {
+    font-size: 4rem;
+  }
+  
+  .courseTitle {
+    font-size: 1.4rem;
+  }
+}
+
+/* 550px - 650px */
+@media (min-width: 551px) and (max-width: 650px) {
+  .container {
+    padding: 1.6rem;
+    border-radius: 3.2rem;
+  }
+  
+  .infoGrid {
+    flex-wrap: wrap;
+  }
+  
+  .dayNumber {
+    font-size: 4.5rem;
+  }
+}
+
+/* 650px - 750px */
+@media (min-width: 651px) and (max-width: 750px) {
+  .title {
+    font-size: 2.3rem;
+  }
+  
+  .infoGrid {
+    flex-wrap: wrap;
+  }
+}
+
+/* 750px and above */
+@media (min-width: 751px) {
+  .infoGrid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

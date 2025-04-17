@@ -1,0 +1,35 @@
+.title {
+    font-family: 'Assistant', sans-serif;
+    font-size: 2rem;
+    margin: 1% auto;
+background: linear-gradient(135deg, #5a9ea3, #7ab4b9, #93bcbd, #7ab4b9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    direction: rtl;
+    text-shadow:
+      0 0 3px rgba(0, 188, 212, 0.1);
+  }
+  
+  .description {
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.4rem;
+    direction: rtl;
+    width: 90%;
+    margin: 1% auto;
+background: linear-gradient(135deg, #5a9ea3, #7ab4b9, #93bcbd, #7ab4b9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    text-shadow:
+      0 0 3px rgba(0, 188, 212, 0.1);
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2% auto;
+}

@@ -1,0 +1,102 @@
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-family: 'Assistant', sans-serif;
+  font-size: 2rem;
+  margin: 3% auto;
+background: linear-gradient(135deg, #5a9ea3, #7ab4b9, #93bcbd, #7ab4b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  direction: rtl;
+  text-shadow:
+    0 0 3px rgba(0, 188, 212, 0.1);
+}
+
+.explain {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.4rem;
+  direction: rtl;
+  width: 90%;
+  margin: 3% auto;
+ background: linear-gradient(135deg, #5a9ea3, #7ab4b9, #93bcbd, #7ab4b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  text-shadow:
+    0 0 3px rgba(0, 188, 212, 0.1);
+}
+
+.scrollTrack {
+  display: flex;
+  width: fit-content;
+  animation: scroll 50s linear infinite;
+  gap: 20px; /* מרווח בין הקבוצות */
+}
+
+.scrollContainer {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+  width: 300px;
+  height: 400px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .explain {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .imageWrapper {
+    width: 250px;
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 1050px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .explain {
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .imageWrapper {
+    width: 280px;
+    height: 380px;
+  }
+}

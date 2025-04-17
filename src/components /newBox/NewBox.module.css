@@ -1,0 +1,180 @@
+.NewBox {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% auto;
+    /* Lighter teal-themed glass effect */
+    box-shadow: 
+      0 8px 12px rgba(0, 0, 0, 0.08),
+      0 2px 4px rgba(0, 0, 0, 0.04),
+      inset 0 0 20px rgba(171, 232, 244, 0.15),
+      inset 0 0 10px rgba(140, 210, 223, 0.1);
+    transition: all 0.4s ease-out;
+    padding: 20px;
+    background: linear-gradient(165deg, 
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(245, 253, 255, 0.75) 100%
+    );
+    border-radius: 16px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(171, 232, 244, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    /* Scroll reveal animation initial state */
+    opacity: 0;
+    transform: rotate3d(1, 1, 0, 30deg) scale(0.9);
+    transform-origin: center center;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  /* Scroll reveal animation when element is visible */
+  .NewBox.visible {
+    opacity: 1;
+    transform: rotate3d(0, 0, 0, 0deg) scale(1);
+    transition: opacity 0.8s ease-out, 
+                transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .NewBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.3) 25%,
+      rgba(171, 232, 244, 0.15) 50%,
+      rgba(140, 210, 223, 0.1) 75%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+    pointer-events: none;
+    border-radius: 16px;
+    z-index: -1;
+  }
+  
+  .NewBox:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 
+      0 15px 20px rgba(0, 0, 0, 0.08),
+      0 5px 8px rgba(0, 0, 0, 0.04),
+      inset 0 0 25px rgba(171, 232, 244, 0.2),
+      inset 0 0 15px rgba(140, 210, 223, 0.15);
+  }
+  
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    font-family: "AssistantR";
+    text-align: center;
+    direction: rtl;
+    width: 100%;
+    color: rgba(20, 60, 70, 0.9);
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-family: "Assistant";
+    text-align: center;
+    direction: rtl;
+    width: 100%;
+    color: rgba(20, 60, 70, 1);
+    margin-bottom: 10px;
+  }
+  
+  .iconCircle {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Adding shimmer effect on hover */
+  .NewBox:hover::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shimmer 3s infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) rotate(30deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(30deg);
+    }
+  }
+  
+  /* Media queries */
+  @media only screen and (max-width: 350px) {
+    .NewBox {
+      width: 280px;
+    }
+    .description {
+      font-size: 1rem;
+    }
+    .title {
+      font-size: 1.5rem;
+    }
+    .iconCircle {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  
+  @media only screen and (min-width: 350px) and (max-width: 450px) {
+    .NewBox {
+      width: 300px;
+    }
+    .description {
+      font-size: 1.1rem;
+    }
+    .title {
+      font-size: 1.35rem;
+    }
+    .iconCircle {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  @media only screen and (min-width: 450px) and (max-width: 550px) {
+    .NewBox {
+      width: 350px;
+    }
+    .description {
+      font-size: 1.15rem;
+    }
+    .title {
+      font-size: 1.35rem;
+    }
+    .iconCircle {
+      width: 85px;
+      height: 85px;
+    }
+  }
