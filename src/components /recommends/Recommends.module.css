@@ -71,11 +71,11 @@ background: linear-gradient(135deg, #5a9ea3, #7ab4b9, #93bcbd, #7ab4b9);
 /* Responsive adjustments */
 @media only screen and (max-width: 450px) {
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .explain {
-    font-size: 18px;
+    font-size: 20px;
     width: 90%;
   }
 

@@ -2,8 +2,8 @@ import Sillabuses from "../components /Sillabus/Sillabus"
 import styles from "./ThirdScreen.module.css"
 const ThirdScreen=()=><>
 
-    <div className={styles.title}>אז.. ככה הדברים עומדים לקרות</div>
-    <div className={styles.description}>שני קורסים ייחודיים שעוצבו במיוחד עבורך, כל אחד עם היתרונות שלו</div>
+    <div className={styles.title}>יאללה! הגיע הזמן לצלול עמוק..</div>
+    <div className={styles.description}>שני קורסים ייחודיים שעוצבו ונבנו במיוחד עבורך, כל אחד והיתרונות שלו - ככה זה הולך לעבוד:</div>
 
     <Sillabuses/>
 </>

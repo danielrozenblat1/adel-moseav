@@ -1,0 +1,285 @@
+.title {
+    font-family: 'Assistant', sans-serif;
+    font-size: 2rem;
+    margin: 1% auto;
+    background: linear-gradient(135deg, #5a9ea3, #7ab4b9, #93bcbd, #7ab4b9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    direction: rtl;
+    text-shadow: 0 0 3px rgba(0, 188, 212, 0.1);
+  }
+  
+  .center {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin: 2% auto;
+  }
+  
+  .image {
+    object-fit: contain;
+    width: 100%;
+  }
+  
+  .description {
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.4rem;
+    direction: rtl;
+    width: 90%;
+    margin: 1% auto;
+    background: linear-gradient(135deg, #5a9ea3, #7ab4b9, #93bcbd, #7ab4b9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    text-shadow: 0 0 3px rgba(0, 188, 212, 0.1);
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2% auto;
+  }
+  
+  /* מתחת ל-350px */
+  @media screen and (max-width: 349px) {
+    .title {
+      font-size: 1.3rem;
+      margin: 3% auto;
+    }
+    
+    .description {
+      font-size: 0.9rem;
+      width: 95%;
+      margin: 3% auto;
+    }
+    
+    .row {
+      flex-direction: column;
+      align-items: center;
+      margin: 4% auto;
+    }
+    
+    .center {
+      width: 100%;
+      margin: 4% auto;
+    }
+  }
+  
+  /* 350px-450px */
+  @media screen and (min-width: 350px) and (max-width: 450px) {
+    .title {
+      font-size: 1.8rem;
+      margin: 2.8% auto;
+    }
+    
+    .description {
+      font-size: 1.1rem;
+      width: 95%;
+      margin: 2.8% auto;
+    }
+    
+    .row {
+      flex-direction: column;
+      align-items: center;
+      margin: 3.8% auto;
+    }
+    
+    .center {
+      width: 90%;
+      margin: 3.8% auto;
+    }
+  }
+  
+  /* 450px-550px */
+  @media screen and (min-width: 451px) and (max-width: 550px) {
+    .title {
+      font-size: 1.7rem;
+      margin: 2.6% auto;
+    }
+    
+    .description {
+      font-size: 1.1rem;
+      width: 93%;
+      margin: 2.6% auto;
+    }
+    
+    .row {
+      flex-direction: column;
+      align-items: center;
+      margin: 3.6% auto;
+    }
+    
+    .center {
+      width: 80%;
+      margin: 3.6% auto;
+    }
+  }
+  
+  /* 550px-650px */
+  @media screen and (min-width: 551px) and (max-width: 650px) {
+    .title {
+      font-size: 1.9rem;
+      margin: 2.4% auto;
+    }
+    
+    .description {
+      font-size: 1.2rem;
+      width: 92%;
+      margin: 2.4% auto;
+    }
+    
+    .row {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 3.4% auto;
+    }
+    
+    .center {
+      width: 70%;
+      margin: 3.4% auto;
+    }
+  }
+  
+  /* 650px-750px */
+  @media screen and (min-width: 651px) and (max-width: 750px) {
+    .title {
+      font-size: 2.1rem;
+      margin: 2.2% auto;
+    }
+    
+    .description {
+      font-size: 1.3rem;
+      width: 91%;
+      margin: 2.2% auto;
+    }
+    
+    .row {
+      margin: 3.2% auto;
+    }
+    
+    .center {
+      width: 60%;
+      margin: 3.2% auto;
+    }
+  }
+  
+  /* 750px-850px */
+  @media screen and (min-width: 751px) and (max-width: 850px) {
+    .title {
+      font-size: 2.3rem;
+      margin: 2% auto;
+    }
+    
+    .description {
+      font-size: 1.4rem;
+      width: 90%;
+      margin: 2% auto;
+    }
+    
+    .row {
+      margin: 3% auto;
+    }
+    
+    .center {
+      width: 50%;
+      margin: 3% auto;
+    }
+  }
+  
+  /* 850px-950px */
+  @media screen and (min-width: 851px) and (max-width: 950px) {
+    .title {
+      font-size: 2.5rem;
+      margin: 1.8% auto;
+    }
+    
+    .description {
+      font-size: 1.5rem;
+      width: 90%;
+      margin: 1.8% auto;
+    }
+    
+    .row {
+      margin: 2.8% auto;
+    }
+    
+    .center {
+      width: 45%;
+      margin: 2.8% auto;
+    }
+  }
+  
+  /* 950px-1050px */
+  @media screen and (min-width: 951px) and (max-width: 1050px) {
+    .title {
+      font-size: 2.7rem;
+      margin: 1.6% auto;
+    }
+    
+    .description {
+      font-size: 1.6rem;
+      width: 90%;
+      margin: 1.6% auto;
+    }
+    
+    .row {
+      margin: 2.6% auto;
+    }
+    
+    .center {
+      width: 40%;
+      margin: 2.6% auto;
+    }
+  }
+  
+  /* 1050px-1150px */
+  @media screen and (min-width: 1051px) and (max-width: 1150px) {
+    .title {
+      font-size: 2.9rem;
+      margin: 1.4% auto;
+    }
+    
+    .description {
+      font-size: 1.7rem;
+      width: 90%;
+      margin: 1.4% auto;
+    }
+    
+    .row {
+      margin: 2.4% auto;
+    }
+    
+    .center {
+      width: 35%;
+      margin: 2.4% auto;
+    }
+  }
+  
+  /* 1150px-1250px */
+  @media screen and (min-width: 1151px) and (max-width: 1250px) {
+    .title {
+      font-size: 3.1rem;
+      margin: 1.2% auto;
+    }
+    
+    .description {
+      font-size: 1.8rem;
+      width: 90%;
+      margin: 1.2% auto;
+    }
+    
+    .row {
+      margin: 2.2% auto;
+    }
+    
+    .center {
+      width: 30%;
+      margin: 2.2% auto;
+    }
+  }
+  

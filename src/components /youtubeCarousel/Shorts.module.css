@@ -1,0 +1,86 @@
+/* YoutubeCarousel.module.css */
+.container {
+    position: relative;
+    width: 100%;
+
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 8px;
+    width:90%;
+    padding: 50px 8px;
+    margin: 50px auto;;
+  }
+  
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .videoWrapper {
+    flex: none;
+    width: 200px;
+    padding: 8px;
+  }
+  
+  .videoFrame {
+    width: 100%;
+    aspect-ratio: 9/16;
+    border-radius: 8px;
+    border: none;
+    height: 340px;
+  }
+  
+  .navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.2s;
+    z-index: 10;
+  }
+  
+  .navButton:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .prevButton {
+    left: 8px;
+  }
+  
+  .nextButton {
+    right: 8px;
+  }
+  
+  .navIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Responsive breakpoints */
+  @media (max-width: 550px) {
+    .videoWrapper {
+      width: 250px;
+    }
+  }
+  
+  @media (min-width: 551px) and (max-width: 850px) {
+    .videoWrapper {
+      width: 250px;
+    }
+  }
+  
+  @media (min-width: 851px) {
+    .videoWrapper {
+      width: 250px;
+    }
+  }

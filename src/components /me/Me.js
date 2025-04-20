@@ -4,6 +4,7 @@ import suzana from "../../images/אדל מושייב תמונה מרכזית.png
 import Works from '../recommends/Works';
 import Recommendations from '../recommends/Recommends';
 import FormScreen from '../form/FormScreen';
+import ForthScreen from '../../screens/ForthScreen';
 
 
 const AboutMe = () => {
@@ -27,7 +28,7 @@ const AboutMe = () => {
       </div>
       <Works/>
       <Recommendations/>
-      {/* המלצות */}
+   <ForthScreen/>
       <FormScreen/>
     </>
   );
