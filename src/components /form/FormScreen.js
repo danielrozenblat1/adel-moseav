@@ -8,7 +8,7 @@ const FormScreen = (props) => {
   const emailRef = useRef('')
   const reasonRef = useRef('')
   const serverUrl = "https://dynamic-server-dfc88e1f1c54.herokuapp.com/leads/newLead"
-  const reciver = "aviarc100@gmail.com"
+  const reciver = "adelmosaiv@gmail.com"
 
   const submitHandler = async(e) => {
       e.preventDefault()

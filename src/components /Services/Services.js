@@ -109,7 +109,7 @@ const MyServices = () => {
 
   return (
     <div className={styles.servicesContainer}>
-      <h1 className={styles.mainTitle}>הטיפולים שלי</h1>
+      <h1 className={styles.mainTitle} id="טיפולים">הטיפולים שלי</h1>
       <div className={styles.servicesGrid}>
         {services.map((service, index) => (
           <ServiceCard key={index} service={service} />

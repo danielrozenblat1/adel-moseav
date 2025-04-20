@@ -10,7 +10,7 @@ const SecondScreen=()=>{
 
 return <>
 
-<div className={styles.title}>אם הגעת לכאן</div>
+<div className={styles.title} id="קורס">אם הגעת לכאן</div>
 <div className={styles.description}>סימן שאת מאוהבת בתחום הריסים ורוצה להתחיל לקחת את התשוקה שלך לשלב הבא </div>
 <div className={styles.title}>ולהתחיל</div>ֿ
 
