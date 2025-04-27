@@ -7,6 +7,7 @@ import female from "../../icons/wired-outline-633-female-standing-hover-success.
 import prefection from "../../icons/wired-outline-1575-eyelash-hover-pinch.json"
 import answers from "../../icons/wired-outline-958-faq-frequent-ask-questions-hover-enlarge.json"
 import FormScreen from '../form copy/FormScreen';
+import EyelashCalculator from '../calculate/Calculate';
 const Sillabus = () => {
   return (
     <div className={styles.container}>
@@ -270,6 +271,8 @@ const Sillabus = () => {
             icon={prefection}
           />
         </div>
+
+        <EyelashCalculator/>
         <h3 className={styles.bonusTitle}>השאירי פרטים בטופס למטה לשיחת ייעוץ חינמית ממני</h3>
         <FormScreen/>
     </div>

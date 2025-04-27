@@ -8,6 +8,7 @@ import AboutMe from './components /me/Me';
 import ByMe from './components /ByMe/ByMe';
 import MyServices from './components /Services/Services';
 import ThirdScreen from './screens/ThirdScreen';
+import EyelashCalculator from './components /calculate/Calculate';
 
 function App() {
   return <>
@@ -15,7 +16,9 @@ function App() {
   <FirstScreen/>
   <SecondScreen/>
   <AboutMe/>
+  
   <ThirdScreen/>
+
   <MyServices/>
 
   <ByMe/>
