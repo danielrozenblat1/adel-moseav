@@ -204,7 +204,7 @@ const Sillabus = () => {
               <div className={styles.itemIcon}>
                 <Package size={18} />
               </div>
-              <div className={styles.itemText}>דבק של קודי (הדבק הכי טוב בשוק)</div>
+              <div className={styles.itemText}>דבק של קודי</div>
             </div>
             
             <div className={styles.item}>
@@ -213,7 +213,12 @@ const Sillabus = () => {
               </div>
               <div className={styles.itemText}>פינצטה להרמת ריסים</div>
             </div>
-            
+            <div className={styles.item}>
+              <div className={styles.itemIcon}>
+                <Brush size={18} />
+              </div>
+              <div className={styles.itemText}>חומרים להרמת ריסים שמספיקים ל25 טיפולים</div>
+            </div>
             <div className={styles.item}>
               <div className={styles.itemIcon}>
                 <Brush size={18} />
