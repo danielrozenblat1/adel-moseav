@@ -217,7 +217,7 @@ const Sillabus = () => {
               <div className={styles.itemIcon}>
                 <Brush size={18} />
               </div>
-              <div className={styles.itemText}>חומרים להרמת ריסים שמספיקים ל25 טיפולים</div>
+              <div className={styles.itemText}>חומרים של חברת MAXYMOVA להרמת ריסים שמספיקים ל25 טיפולים</div>
             </div>
             <div className={styles.item}>
               <div className={styles.itemIcon}>
@@ -247,7 +247,10 @@ const Sillabus = () => {
               <div className={styles.itemText}>נילון נצמד לריסים וכל הציוד הדרוש להתחלת עבודה</div>
             </div>
           </div>
+          <div className={styles.bonusTitle} style={{marginTop:"3%"}}>תכלס - כל מה שאת צריכה (חוץ מכיסא ומיטה)</div>
         </div> 
+
+    
         <h3 className={styles.bonusTitle}>וכמובן</h3>
       
       </div>
